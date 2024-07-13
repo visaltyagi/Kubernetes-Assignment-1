@@ -1,3 +1,6 @@
+# Create the install.sh 
+nano install.sh
+
 # Installation command
 sudo apt-get update
 sudo apt-get install docker.io -y
@@ -10,6 +13,10 @@ echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.
 sudo apt-get update
 sudo apt-get install -y kubelet kubeadm kubectl
 sudo systemctl enable --now kubelet
+
+# Run the bash command
+
+bash install.sh
 
 # Initialize the Kubeadm
 sudo kubeadm init
